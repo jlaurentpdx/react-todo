@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchTodos, createTodo } from '../../services/todos';
+import { fetchTodos, createTodo, toggleCompleted, deleteTodo } from '../../services/todos';
 
 import './TodoList.css';
 
@@ -13,17 +13,24 @@ export default function TodoList() {
       setList(data);
     };
     fetchData();
-  }, [list]);
+  }, []);
 
   const addTask = async (e) => {
     try {
       e.preventDefault();
-      await createTodo(task);
+      const resp = await createTodo(task);
+      setTask('');
+      setList((prevState) => [...prevState, resp[0]]);
     } catch {
       alert('something went wrong');
     }
-    setList((prevState) => [...prevState, task]);
-    setTask('');
+  };
+
+  const handleCheck = async (task) => {
+    await toggleCompleted(task.id, !task.is_complete);
+
+    const resp = await fetchTodos();
+    setList(resp);
   };
 
   return (
@@ -32,7 +39,12 @@ export default function TodoList() {
       <div className="todo-list">
         {list.map((item) => (
           <label key={item.id} className="list-item" htmlFor={item.id}>
-            <input id={item.id} type="checkbox" />
+            <input
+              id={item.id}
+              checked={item.is_complete}
+              type="checkbox"
+              onChange={() => handleCheck(item)}
+            />
             {item.task}
           </label>
         ))}
