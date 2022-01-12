@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            {currentUser && <TodoList setCurrentUser={setCurrentUser} />}
+            {currentUser && <TodoList currentUser={currentUser} setCurrentUser={setCurrentUser} />}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
           </Route>
         </Switch>
