@@ -13,27 +13,30 @@ export default function TodoList() {
       setList(data);
     };
     fetchData();
-  }, []);
+  }, [list]);
 
-  const addTask = async () => {
+  const addTask = async (e) => {
     try {
+      e.preventDefault();
       await createTodo(task);
-      alert('task added');
     } catch {
       alert('something went wrong');
     }
+    setList((prevState) => [...prevState, task]);
+    setTask('');
   };
 
   return (
-    <section>
-      <div>
+    <section className="display-todo">
+      <h1>here&apos;s what:</h1>
+      <div className="todo-list">
         {list.map((item) => (
-          <div key={item.id}>
-            <input value={item.task} type="checkbox" /> <span>{item.task}</span>
-          </div>
+          <label key={item.id} className="list-item" htmlFor={item.id}>
+            <input id={item.id} type="checkbox" />
+            {item.task}
+          </label>
         ))}
       </div>
-      <h1>here&apos;s what.</h1>
       <form className="todo-form">
         <input
           value={task}
