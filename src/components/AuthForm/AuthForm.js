@@ -1,3 +1,5 @@
+import './AuthForm.css';
+
 export default function AuthForm({
   email,
   setEmail,
@@ -7,8 +9,8 @@ export default function AuthForm({
   handleSubmit,
 }) {
   return (
-    <div>
-      <p style={{ color: '#ff0000' }}>{message}</p>
+    <>
+      <p>{message}</p>
       <form className="auth-form">
         <label htmlFor="email">E-mail:</label>
         <input
@@ -28,6 +30,6 @@ export default function AuthForm({
         />
         <button onClick={handleSubmit}>Submit</button>
       </form>
-    </div>
+    </>
   );
 }

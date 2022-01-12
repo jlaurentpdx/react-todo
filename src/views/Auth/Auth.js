@@ -16,8 +16,8 @@ export default function Auth({ setCurrentUser }) {
       e.preventDefault();
       response =
         type === 'login'
-          ? await users.signInUser(email, password)
-          : await users.signUpUser(email, password);
+          ? await users.loginUser(email, password)
+          : await users.registerUser(email, password);
       setMessage('Success! Redirecting...');
       setTimeout(() => {
         setCurrentUser(response);
