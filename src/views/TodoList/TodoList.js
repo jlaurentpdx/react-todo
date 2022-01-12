@@ -1,11 +1,19 @@
-import { useState } from 'react';
-import { logout } from '../../services/users';
-import { createTodo } from '../../services/todos';
+import { useState, useEffect } from 'react';
+import { fetchTodos, createTodo } from '../../services/todos';
 
 import './TodoList.css';
 
-export default function TodoList({ props, setCurrentUser }) {
+export default function TodoList() {
   const [task, setTask] = useState('');
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchTodos();
+      setList(data);
+    };
+    fetchData();
+  }, []);
 
   const addTask = async () => {
     try {
@@ -16,13 +24,15 @@ export default function TodoList({ props, setCurrentUser }) {
     }
   };
 
-  const logoutUser = async () => {
-    await logout();
-    setCurrentUser(null);
-  };
-
   return (
-    <div>
+    <section>
+      <div>
+        {list.map((item) => (
+          <div key={item.id}>
+            <input value={item.task} type="checkbox" /> <span>{item.task}</span>
+          </div>
+        ))}
+      </div>
       <h1>here&apos;s what.</h1>
       <form className="todo-form">
         <input
@@ -33,9 +43,6 @@ export default function TodoList({ props, setCurrentUser }) {
         />
         <button onClick={addTask}>add it</button>
       </form>
-      <button onClick={logoutUser} style={{ margin: 'auto', marginTop: '2%' }}>
-        logout
-      </button>
-    </div>
+    </section>
   );
 }

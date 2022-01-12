@@ -21,7 +21,7 @@ export default function Auth({ setCurrentUser }) {
       setMessage('Success! Redirecting...');
       setTimeout(() => {
         setCurrentUser(response);
-      }, 1000);
+      }, 500);
     } catch {
       setMessage('Invalid email or password');
     }
