@@ -1,24 +1,24 @@
 import classNames from 'classnames';
-import './Header.css';
+import './AuthHeader.css';
 
-export default function Header({ type, setType, setMessage }) {
+export default function AuthHeader({ type, setType, setMessage }) {
   return (
     <header>
       <h1
+        className={classNames({ active: type === 'login' })}
         onClick={() => {
           setType('login');
           setMessage('');
         }}
-        className={classNames({ active: type === 'login' })}
       >
         Login
       </h1>
       <h1
+        className={classNames({ active: type === 'register' })}
         onClick={() => {
           setType('register');
           setMessage('');
         }}
-        className={classNames({ active: type === 'register' })}
       >
         Register
       </h1>

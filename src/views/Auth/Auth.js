@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import * as users from '../../services/users';
-import Header from '../../components/Header/Header';
+import AuthHeader from '../../components/Headers/AuthHeader';
 import AuthForm from '../../components/AuthForm/AuthForm';
-import './Auth.css';
 
 export default function Auth({ setCurrentUser }) {
   const [type, setType] = useState('login');
@@ -30,7 +29,7 @@ export default function Auth({ setCurrentUser }) {
   return (
     <>
       <div>
-        <Header {...{ type, setType, setMessage }} />
+        <AuthHeader {...{ type, setType, setMessage }} />
         <AuthForm {...{ email, setEmail, password, setPassword, message, handleSubmit }} />
       </div>
     </>

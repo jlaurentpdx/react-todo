@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom/cjs/react-router-
 import { getUser, logout } from './services/users';
 
 import Auth from './views/Auth/Auth';
-import TodoList from './views/TodoList/TodoList';
+import Todo from './views/Todo/Todo';
 
 import './App.css';
 
@@ -22,10 +22,10 @@ function App() {
           <Route exact path="/">
             {currentUser && (
               <>
-                <TodoList currentUser={currentUser} setCurrentUser={setCurrentUser} />
-                <button onClick={logoutUser} style={{ margin: 'auto', marginTop: '2%' }}>
+                <h2 className="logout-button" onClick={logoutUser}>
                   logout
-                </button>
+                </h2>
+                <Todo currentUser={currentUser} setCurrentUser={setCurrentUser} />
               </>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
