@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth should display Header and AuthForm when user is not logged in 1`] = `
+<div>
+  <div>
+    <header>
+      <h1
+        class="active"
+      >
+        login
+      </h1>
+      <h1
+        class=""
+      >
+        register
+      </h1>
+    </header>
+    <p />
+    <form
+      class="auth-form"
+    >
+      <label
+        for="email"
+      >
+        e-mail:
+      </label>
+      <input
+        name="email"
+        placeholder="email@example.com"
+        type="email"
+        value=""
+      />
+      <label
+        for="password"
+      >
+        password:
+      </label>
+      <input
+        name="password"
+        placeholder="password"
+        type="password"
+        value=""
+      />
+      <button
+        class="submit-button"
+      >
+        submit
+      </button>
+    </form>
+  </div>
+</div>
+`;
