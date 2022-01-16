@@ -34,8 +34,13 @@ button {
   border: 1px dashed var(--white);
   border-radius: 3px;
   font-family: 'Titillium Web', sans-serif;
-  width: 20vw;
+  width: 180px;
   margin: 15px;
+}
+
+input[type='text'] {
+  width: 230px;
+  text-align: center;
 }
 
 .add-button {
@@ -43,7 +48,7 @@ button {
   color: var(--white);
   font-family: 'Fredoka One', sans-serif;
   font-weight: 200;
-  font-size: 120%;
+  font-size: 130%;
 }
 
 .clear-button {

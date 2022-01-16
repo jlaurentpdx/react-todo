@@ -25,4 +25,7 @@
   background-color: var(--red);
   margin: 5%;
   color: var(--white);
+  font-family: 'Fredoka One';
+  font-weight: 200;
+  font-size: 130%;
 }

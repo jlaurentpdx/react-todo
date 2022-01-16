@@ -12,7 +12,7 @@ export default function AuthForm({
     <>
       <p>{message}</p>
       <form className="auth-form">
-        <label htmlFor="email">E-mail:</label>
+        <label htmlFor="email">e-mail:</label>
         <input
           name="email"
           value={email}
@@ -20,7 +20,7 @@ export default function AuthForm({
           placeholder="email@example.com"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">password:</label>
         <input
           name="password"
           value={password}
@@ -29,7 +29,7 @@ export default function AuthForm({
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="submit-button" onClick={handleSubmit}>
-          Submit
+          submit
         </button>
       </form>
     </>

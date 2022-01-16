@@ -11,7 +11,7 @@ export default function AuthHeader({ type, setType, setMessage }) {
           setMessage('');
         }}
       >
-        Login
+        login
       </h1>
       <h1
         className={classNames({ active: type === 'register' })}
@@ -20,7 +20,7 @@ export default function AuthHeader({ type, setType, setMessage }) {
           setMessage('');
         }}
       >
-        Register
+        register
       </h1>
     </header>
   );

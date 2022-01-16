@@ -35,6 +35,13 @@ html {
 
 .logout-button {
   text-align: right;
+  color: var(--blue-light);
   width: 100%;
+  right: 0;
+  left: 80%;
   margin: 2vh 20vw 0 0;
+}
+
+.logout-button:hover {
+  color: var(--red);
 }
