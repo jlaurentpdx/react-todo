@@ -51,8 +51,10 @@ export default function Todo() {
 
   return (
     <>
-      <p style={{ margin: '0' }}>here&apos;s</p>
-      <h1 style={{ margin: '0' }}>what to-do</h1>
+      <h2 className="subheader" style={{ margin: '0' }}>
+        okay... here&apos;s
+      </h2>
+      <h1 className="app-name">what to-do</h1>
       <hr style={{ width: '10%' }} />
       <TodoList {...{ message, todoList, task, setTask, addNewTask, handleCheck, handleClear }} />
     </>

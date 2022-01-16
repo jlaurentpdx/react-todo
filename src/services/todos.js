@@ -1,7 +1,11 @@
 import { checkError, client } from './client';
 
 export async function fetchTodos() {
-  const resp = await client.from('todos').select('*').order('is_complete', true);
+  const resp = await client
+    .from('todos')
+    .select('*')
+    .order('is_complete', true)
+    .order('inserted_at', true);
   return checkError(resp);
 }
 

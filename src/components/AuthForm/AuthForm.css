@@ -10,10 +10,19 @@
   width: 10vw;
   min-width: 150px;
   max-width: 230px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-.auth-form > button {
-  margin: 1%;
-  color: white;
-  background-color: darkslateblue;
+.auth-form > label {
+  color: var(--white);
+}
+
+.auth-form > input {
+  color: var(--blue-dark);
+}
+
+.submit-button {
+  background-color: var(--red);
+  margin: 5%;
+  color: var(--white);
 }

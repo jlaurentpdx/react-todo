@@ -1,13 +1,14 @@
 header {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 15%;
 }
 
 header > h1 {
-  color: lightgray;
+  color: var(--blue-mid);
 }
 
 .active {
-  color: black;
+  color: var(--red);
+  text-decoration: underline;
 }

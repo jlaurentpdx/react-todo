@@ -30,7 +30,7 @@ export default function TodoList({
           className="new-task-input"
           value={task}
           type="text"
-          placeholder="add a task"
+          placeholder="enter a new to-do, and..."
           onChange={(e) => setTask(e.target.value)}
         />
         <button className="add-button" onClick={addNewTask}>

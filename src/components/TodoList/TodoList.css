@@ -9,6 +9,7 @@
 
 .todo-item {
   text-align: left;
+  color: var(--white);
 }
 
 .todo-form {
@@ -23,9 +24,14 @@
   width: 20vw;
 }
 
+p {
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--red);
+}
+
 button {
-  box-shadow: lightgrey 0 2px;
-  border: none;
+  box-shadow: var(--blue-mid) 2px 3px;
+  border: 1px dashed var(--white);
   border-radius: 3px;
   font-family: 'Titillium Web', sans-serif;
   width: 20vw;
@@ -33,15 +39,16 @@ button {
 }
 
 .add-button {
-  background-color: #f44336;
-  color: whitesmoke;
-  font-weight: 400;
-  font-size: 100%;
+  background-color: var(--red);
+  color: var(--white);
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 200;
+  font-size: 120%;
 }
 
 .clear-button {
-  background-color: #555555;
-  border: none;
-  color: whitesmoke;
-  font-size: 80%;
+  background-color: var(--blue-mid);
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--white);
+  font-size: 100%;
 }

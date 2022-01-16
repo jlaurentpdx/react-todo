@@ -28,7 +28,13 @@ function App() {
                 <Todo currentUser={currentUser} setCurrentUser={setCurrentUser} />
               </>
             )}
-            {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
+            {!currentUser && (
+              <>
+                <h1 className="app-name">what</h1>
+                <h2 className="subheader">a to-do app</h2>
+                <Auth setCurrentUser={setCurrentUser} />
+              </>
+            )}
           </Route>
         </Switch>
       </BrowserRouter>

@@ -28,7 +28,9 @@ export default function AuthForm({
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleSubmit}>Submit</button>
+        <button className="submit-button" onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </>
   );
