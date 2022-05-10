@@ -1,25 +1,32 @@
-# Alchemy React Base Template
+# Half Baked Registration
+Use [this template](https://github.com/alchemycodelab/react-half-baked-registration) and your own supabase database for this app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Learning Objectives
 
-Use this template for all your "from scratch" deliverables. To start, simply run
+- Connect Supabase's auth methods to a React form to provide Sign In and Sign Up support
+- Use React state and Supabase's auth methods to create protected routes in React router which are only available to authenticated users
 
-- `npm install`
-- `npm start`
+### Description
 
-## Available Scripts
+This app is solely focused on creating registration. You should have a single route (the "/" root or home page). When the user is not authenticated, the user should see sign in and sign up forms. When the user is authenticated, they should something else...anything else. A meme, a joke, a You Tube video. Your choice. All that's important is that you implement the registration and authentication process.
 
-In the project directory, you can run:
+Use your own Supabase database for this.
 
-### `npm start`
+The Supabase client code in `services` has been provided for you. You need to connect this to a React form and state.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Acceptance Criteria
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Users can sign up for an account
+- Users can sign in to an existing account
+- Users can logout of an account
+- Unauthenticated users see the option to sign in or sign up
+- Authenticated users see something else
 
-### `npm test`
+### Rubric
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Task                                         | Points |
+| -------------------------------------------- | ------ |
+| Sign up / sign in page                       | 3      |
+| Routes properly check for authenticated user | 3      |
+| Authenticated users can log out              | 2      |
+| Authenticated users see something else       | 2      |

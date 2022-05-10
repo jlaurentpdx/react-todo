@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+header > h1 {
+  color: var(--blue-mid);
+}
+
+.active {
+  color: var(--red);
+  text-decoration: underline;
+}

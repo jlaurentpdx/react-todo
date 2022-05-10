@@ -1,38 +1,47 @@
+:root {
+  --red: #e63946;
+  --white: #f1faee;
+  --blue-light: #a8dadc;
+  --blue-mid: #457b9d;
+  --blue-dark: #1d3557;
+}
+
+html {
+  background: var(--blue-dark);
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.app-name {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  margin: 0;
+  color: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subheader {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 200;
+  color: var(--blue-light);
+}
+
+.logout-button {
+  text-align: right;
+  color: var(--blue-light);
+  width: 100%;
+  right: 0;
+  left: 80%;
+  margin: 2vh 20vw 0 0;
+}
+
+.logout-button:hover {
+  color: var(--red);
 }
